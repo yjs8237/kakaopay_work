@@ -1,5 +1,6 @@
 package com.greatyun.kakakopay.domain;
 
+import com.greatyun.kakakopay.enumuration.EnumFinishYn;
 import com.greatyun.kakakopay.repository.MemberRepository;
 import com.greatyun.kakakopay.repository.MoneyRepository;
 import com.greatyun.kakakopay.repository.ChatRoomRepository;
@@ -22,6 +23,7 @@ class MoneyTest {
 
     @Autowired
     private ChatRoomRepository chatRoomRepository;
+
 
     private ChatRoom chatRoom;
 
@@ -54,8 +56,11 @@ class MoneyTest {
 
         // 뿌리기 금액
         int moneyValue = 10000;
+        String token = "123";
         Money money = Money.builder()
                 .money(moneyValue)
+                .token(token)
+                .finishYn(EnumFinishYn.N)
                 .build();
         money.createMoney(this.member , this.chatRoom.getPkid());
         // 뿌리기 생성

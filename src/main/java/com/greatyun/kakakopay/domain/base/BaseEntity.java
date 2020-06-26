@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-@Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -35,4 +34,9 @@ public class BaseEntity {
 
     @CreatedDate
     private LocalDateTime regDate;
+
+    // 등록시각 변경
+    public void changeDateTime(LocalDateTime localDateTime) {
+        this.regDate = localDateTime;
+    }
 }

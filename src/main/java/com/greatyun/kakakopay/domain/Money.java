@@ -7,6 +7,7 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class Money extends BaseEntity {
     @NotNull
     private Long roomId;
 
-    // 뿌리기할 인원 수 (? 필요할까)
+    // 뿌리기 인원 수
     private int peopleCnt;
 
     // 뿌리기 생성 후 발생하는 고유 토큰
@@ -58,6 +59,7 @@ public class Money extends BaseEntity {
     public void changeFinishStatus(EnumFinishYn enumFinishYn) {
         this.finishYn = enumFinishYn;
     }
+
 
     // 뿌리기 엔티티 생성
     public void createMoney(Member member , Long roomId) {
