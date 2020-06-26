@@ -28,6 +28,4 @@ public class MemberDTO {
     // 뿌리기 등록시 Money 엔티티와 연관매핑
     private List<Money> myMoneyList;
 
-
-
 }

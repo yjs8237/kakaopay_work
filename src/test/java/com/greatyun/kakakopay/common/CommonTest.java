@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
+import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -25,8 +26,8 @@ public class CommonTest {
 
     @BeforeEach
     public void before() {
-        this.shareMoney = 5;
-        this.peopleCnt = 10;
+        this.shareMoney = 1;
+        this.peopleCnt = 2;
     }
 
     @Test
@@ -37,13 +38,18 @@ public class CommonTest {
 
         int total = 0;
         for (Integer money : result) {
-            //System.out.println("list mon -> " + money);
+            System.out.println("list mon -> " + money);
             total += money;
         }
-
         System.out.println("total : " + total + " , shareMoney : "+ shareMoney);
         // 뿌리려는 금액과 인원수에 맞게 랜덤하게 책정된 금액의 합계는 동일해야 한다.
         assertThat(total).isEqualTo(shareMoney);
+    }
+
+    @Test
+    public void uuidTest() {
+        String uuid = UUID.randomUUID().toString();
+        System.out.println(uuid);
     }
 
 

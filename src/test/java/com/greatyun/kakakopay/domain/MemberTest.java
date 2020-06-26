@@ -3,7 +3,7 @@ package com.greatyun.kakakopay.domain;
 import com.greatyun.kakakopay.exception.KakaoPayException;
 import com.greatyun.kakakopay.repository.MemberRepository;
 import com.greatyun.kakakopay.repository.MemberRoomMapRepository;
-import com.greatyun.kakakopay.repository.RoomRepository;
+import com.greatyun.kakakopay.repository.ChatRoomRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,7 +19,7 @@ class MemberTest {
     private MemberRepository memberRepository;
 
     @Autowired
-    private RoomRepository roomRepository;
+    private ChatRoomRepository chatRoomRepository;
 
     @Autowired
     private MemberRoomMapRepository memberRoomMapRepository;
@@ -66,7 +66,7 @@ class MemberTest {
         ChatRoom chatRoom = ChatRoom.builder()
                 .ownerMemberId(savedMember.getPkid())
                 .build();
-        ChatRoom savedChatRoom = roomRepository.save(chatRoom);
+        ChatRoom savedChatRoom = chatRoomRepository.save(chatRoom);
 
 
         // when

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.UUID;
 
 @Component
 public class CommonUtil {
@@ -23,11 +24,6 @@ public class CommonUtil {
             throw new KakaoPayException("인원수와 뿌리기 금액은 0이 될 수 없습니다.");
         }
 
-//        if(peopleCnt > shareMoney) {
-//            throw new KakaoPayException("인원수가 뿌리기 금액보다 높을 수 없습니다.");
-//        }
-
-
         // 인원이 1명이면 뿌리기 금액 전체를 가져간다
         if(peopleCnt == 1) {
             ret.add(shareMoney);
@@ -41,11 +37,28 @@ public class CommonUtil {
                 ret.add(shareMoney);
                 break;
             }
-            int randomMoney = shareMoney <= 0 ? 0 : random.nextInt(shareMoney / divideTargetCnt);
-            ret.add(randomMoney);
-            divideTargetCnt--;
-            shareMoney -= randomMoney;
+            int bound = shareMoney / divideTargetCnt;
+            if(bound <= 0) {
+                ret.add(0);
+            } else {
+                int randomMoney = shareMoney <= 0 ? 0 : random.nextInt(bound);
+                ret.add(randomMoney);
+                divideTargetCnt--;
+                shareMoney -= randomMoney;
+                shareMoney = shareMoney < 0 ? 0 : shareMoney;
+            }
         }
+        return ret;
+    }
+
+    /**
+     * 뿌리기 완료 후 토큰 생성
+     *
+     */
+    public String createToken() {
+        String ret = UUID.randomUUID().toString();
+        // 뿌리기 생성 후 고유한 token 을 만들기 위한 UUID 사용
+        ret = ret.replaceAll("-" , "").substring(0 , 3);
         return ret;
     }
 

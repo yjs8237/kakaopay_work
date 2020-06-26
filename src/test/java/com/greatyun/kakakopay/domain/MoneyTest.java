@@ -2,7 +2,7 @@ package com.greatyun.kakakopay.domain;
 
 import com.greatyun.kakakopay.repository.MemberRepository;
 import com.greatyun.kakakopay.repository.MoneyRepository;
-import com.greatyun.kakakopay.repository.RoomRepository;
+import com.greatyun.kakakopay.repository.ChatRoomRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -21,7 +21,7 @@ class MoneyTest {
     private MoneyRepository moneyRepository;
 
     @Autowired
-    private RoomRepository roomRepository;
+    private ChatRoomRepository chatRoomRepository;
 
     private ChatRoom chatRoom;
 
@@ -45,7 +45,7 @@ class MoneyTest {
                 .ownerMemberId(this.member.getPkid())
                 .build();
 
-        this.chatRoom = roomRepository.save(chatRoom);
+        this.chatRoom = chatRoomRepository.save(chatRoom);
     }
 
     @Test
