@@ -1,4 +1,4 @@
-package com.greatyun.kakakopay.domain;
+package com.greatyun.kakakopay.domain.base;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
