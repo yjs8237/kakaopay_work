@@ -85,7 +85,8 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 
 
 --- 
-
+<br/>
+<br/>
 ## Token 발행
 
 > 뿌리기 등록이 완료되면 3자리의 문자열로 구성된 token 값을 발행하여야 한다. 
@@ -94,7 +95,8 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 - UUID 랜덤 데이터 기준으로 앞 3자리의 문자열을 token 값으로 사용
 
 --- 
-
+<br/>
+<br/>
 ## API 테스트
 
 > API 
@@ -106,6 +108,9 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 |조회 API|GET   |/api/v1.0/money/{token} | 토큰 |
 
 
+
+<br/>
+<br/>
 
 
 ### 뿌리기 API 테스트 
@@ -135,12 +140,16 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 	}
 }
 ```
+<br/>
+
 
 > Postman 사용 테스트 
 
 - 헤더 (사용자 ID : 1 , 대화방 ID : 1)
 
 ![enter image description here](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https://k.kakaocdn.net/dn/moGBq/btqE9KZAnfK/KKV5A22lL4kGmXIWhkdTz1/img.png)
+
+<br/>
 
 > peopleCnt (요청 인원 수) : 10 명
 > money (뿌리기금액) :  50,000 원  
@@ -149,6 +158,9 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 
 ![enter image description here](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https://k.kakaocdn.net/dn/qo8WQ/btqFbU0k4FT/AxZAciWY8IVamSd8xPDWck/img.png)
 
+
+<br/>
+<br/>
 
 
 ### 받기 API 테스트 
@@ -177,6 +189,8 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 	}
 }
 ```
+<br/>
+
 
 > Postman 사용 테스트 
 
@@ -189,6 +203,10 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 
 
 ![enter image description here](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https://k.kakaocdn.net/dn/otqLr/btqFaCGMA4V/KK11HuFFfKzS6oFWyi5o70/img.png)
+
+
+<br/>
+<br/>
 
 
 
@@ -224,6 +242,9 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 	}
 }
 ```
+<br/>
+
+
 
 > Postman 사용 테스트 
 
@@ -236,6 +257,9 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 
 ![enter image description here](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https://k.kakaocdn.net/dn/bLzU0i/btqFbjfd4ai/iH6vgjFYEyPvN29nlQjXnk/img.png)
 
+
+<br/>
+<br/>
 
 
 ## To-do 리스트
