@@ -10,11 +10,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 
 @DataJpaTest
@@ -37,7 +35,6 @@ class MoneyResultTest {
 
     @Autowired
     private MemberRoomMapRepository memberRoomMapRepository;
-    
 
     @DisplayName("뿌리기 등록한 인원수와 해당 엔티티의 등록 수와 같아야 한다")
     @Test
