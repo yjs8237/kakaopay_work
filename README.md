@@ -1,3 +1,4 @@
+
 # kakaopay 사전과제
 
 > 카카오페이 뿌리기 기능 구현하기 
@@ -138,6 +139,7 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 > Postman 사용 테스트 
 
 - 헤더 (사용자 ID : 1 , 대화방 ID : 1)
+
 ![enter image description here](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https://k.kakaocdn.net/dn/moGBq/btqE9KZAnfK/KKV5A22lL4kGmXIWhkdTz1/img.png)
 
 > peopleCnt (요청 인원 수) : 10 명
@@ -162,7 +164,7 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 - Request Body
 ```java
 {
-	"token" : "abc" // 토큰
+	"token" : "abc" // 뿌리기 API 를 통해 발급받은 토큰
 }
 ```
 - Response Body 
@@ -179,10 +181,12 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 > Postman 사용 테스트 
 
 - 헤더 (사용자 ID : 3 , 대화방 ID : 1)
+
 ![enter image description here](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https://k.kakaocdn.net/dn/brAZox/btqFaTuuihQ/fkPz3uDrrZChJOkRYh5izK/img.png)
 
 > token : "6cb"
 > Response 받기 금액 
+
 
 ![enter image description here](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https://k.kakaocdn.net/dn/otqLr/btqFaCGMA4V/KK11HuFFfKzS6oFWyi5o70/img.png)
 
@@ -200,7 +204,7 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 
 - PathVariable
 ```java
-	"token" : "abc" // 토큰
+	"token" : "abc" // 뿌리기 API 를 통해 발급받은 토큰
 ```
 - Response Body 
 ```java
@@ -224,6 +228,7 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 > Postman 사용 테스트 
 
 - 헤더 (사용자 ID : 1 , 대화방 ID : 1)
+
 ![enter image description here](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https://k.kakaocdn.net/dn/beSIuL/btqFbVdR7IY/5AjPiP3Np9mFwLgDKkPXkK/img.png)
 
 > token : "6cb"
@@ -233,3 +238,8 @@ API 테스트를 위하여 어플리케이션 로딩 시점에 기본 사전 데
 
 
 
+## To-do 리스트
+
+- Security 적용 (인증 인가)
+- 뿌리기 등록시 발급받은 토큰을 해당 대화방 참여 사용자게에 Push 되도록 구현 필요 
+- 대화방 생성자가 뿌리기 등록 시 등록 횟수 제한조건 필터링 기능 필요
